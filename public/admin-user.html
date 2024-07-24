@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- adding bootstap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- angular js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+
+    <script>
+        var module = angular.module("myModule", []);
+        var controller = module.controller("myController", function($scope, $http) {
+            
+            $scope.fetchall = function() {
+                let url = "/fetch-all-data";
+                $http.get(url).then(success, fail);
+
+                function success(res) {
+                    $scope.jsonAry = res.data;
+                    // alert(JSON.stringify(res.data));
+                }
+
+                function fail(err) {
+                    console.log(err);
+                }
+            };
+
+            $scope.blockone = function(email){
+                 let url = "block-one?email=" +email;
+                  $http.get(url).then(success, fail);
+
+                 function success(res) {
+                    //  $scope.jsonAry = res.data;
+                     // alert(JSON.stringify(res.data));
+                     alert("blocked succesfully")
+                 }
+
+                 function fail(err) {
+                     console.log(err);
+            
+                }  
+                $scope.fetchall();
+            }
+            $scope.unblockone = function(email){
+                 let url = "unblock-one?email=" +email;
+                  $http.get(url).then(success, fail);
+
+                 function success(res) {
+                    //  $scope.jsonAry = res.data;
+                     // alert(JSON.stringify(res.data));
+                    //  alert("unblocked succesfully")
+                    alert(JSON.stringify(res.data));
+                 }
+
+                 function fail(err) {
+                     console.log(err);
+            
+                }  
+                $scope.fetchall();
+            }
+            $scope.delone = function(email,utype){
+                 let url = "delete-one?email=" +email+"&utype="+utype;
+                  $http.get(url).then(success, fail);
+
+                 function success(res) {
+                    //  $scope.jsonAry = res.data;
+                     // alert(JSON.stringify(res.data));
+                     alert("deleted succesfully")
+                 }
+
+                 function fail(err) {
+                     console.log(err);
+            
+                }  
+                $scope.fetchall();
+            }
+
+            $scope.dofilter = function() {
+                let utype = $scope.selutype;
+                let url = "filter-utype?utype=" + utype;
+                $http.get(url).then(success, fail);
+
+                function success(res) {
+                    $scope.jsonAry = res.data;
+                    alert("success");
+                }
+
+                function fail(res) {
+                    alert("fail");
+                }
+            };
+      
+
+        });
+       
+    </script>
+</head>
+<body ng-app="myModule" ng-controller="myController" ng-init = "fetchall()">
+    
+    <center>
+        <h1>Admin user</h1>
+        <hr>
+        
+     <select ng-change="dofilter()" ng-model="selutype">
+        <option value="client">client</option>
+        <option value="influencer">influencer</option>
+    </select> 
+        <div class="container">
+            <table  class="table">
+                <tr>
+                    <th>Sr no.</th>
+                    <th>Email</th>
+                    <th>User type</th>
+                    <th>Status</th
+                </tr>
+                <tr ng-repeat="obj in jsonAry">
+                    <td>{{$index + 1}}</td>
+                    <td >{{obj.email}}</td>
+                    <td>{{obj.utype}}</td>
+                    <td>{{obj.state}}</td>
+                    <td><button class="btn btn-danger" ng-click="blockone(obj.email)">block</button></td>
+                    <td><button class="btn btn-success" ng-click="unblockone(obj.email)">resume</button></td>
+                    <td><button class="btn btn-primary" ng-click="delone(obj.email,obj.utype)">delete</button></td>
+                </tr>
+            </table>
+        </div>
+    </center>
+</body>
+</html>
