@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>localstar</title>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -185,7 +185,7 @@
 </head>
 <body   style="background-color: rgb(248, 247, 248) ;" >
 
-    <nav class="navbar navbar-expand-lg fixed-top" style="height: 50px; background-color: rgb(248, 247, 248);" >
+    <!-- <nav class="navbar navbar-expand-lg fixed-top" style="height: 50px; background-color: rgb(248, 247, 248);" >
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="pic/cute-star-dry-clay-yellow-graphic-kids.jpg" alt="Bootstrap" width="50" height="50" style="border-radius: 50%;">
@@ -213,9 +213,43 @@
             
           </div>
         </div>
+      </nav> -->
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="pic/cute-star-dry-clay-yellow-graphic-kids.jpg" alt="Bootstrap" width="50" height="50" style="border-radius: 50%;">
+          </a>
+          <a class="navbar-brand" href="index.html">localstar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             
+              <li class="nav-item" style="font-size: 15px; margin-left: 10px;">
+                <a class="nav-link active" href="#service">Our Services</a>
+              </li>
+              <li class="nav-item" style="font-size: 15px; margin-left: 10px;">
+                <a class="nav-link active" href="#team">Our Team</a>
+              </li>
+              <li class="nav-item" style="font-size: 15px; margin-left: 10px;">
+                <a class="nav-link active" href="#reach">Reach us</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size: 15px;">Signup</button>
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="margin-left: 10px; font-size: 15px;">Login</button>
+             <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="margin-left: 10px; font-size: 15px;" id = "admin">Admin</button>
+            
+            </form>
+          </div>
+        </div>
       </nav>
+
+
       <!-- Carousal -->
-      <div id="carouselExampleCaptions" class="carousel slide" style="height: 500px; width: 1200px; margin-left: 100px; margin-top: 80px; ">
+      <div id="carouselExampleCaptions" class="carousel slide"  >
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -223,19 +257,19 @@
         </div>
         <div class="carousel-inner" >
           <div class="carousel-item active">
-            <img src="pic/colleagues-working-together-project.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 500px;  background-size: contain;border-radius: 5px;" >
+            <img src="pic/colleagues-working-together-project.jpg" class="d-block w-100" alt="..." style="  background-size: contain;border-radius: 5px;" >
             <div class="carousel-caption d-none d-md-block">
               <h5>Top Trending influencer</h5>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="pic/front-view-woman-online-shopping.jpg" class="d-block w-100" alt="..."style="width: 100%; height: 500px;  background-size: contain;border-radius: 5px;">
+            <img src="pic/front-view-woman-online-shopping.jpg" class="d-block w-100" alt="..."style="  background-size: contain;border-radius: 5px;">
             <div class="carousel-caption d-none d-md-block">
               <h5>Top Trending influencer</h5>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="pic/smiley-woman-talking-phone-medium-shot.jpg" class="d-block w-100" alt="..."style="width: 100%; height: 500px;  background-size: contain; border-radius: 5px;">
+            <img src="pic/smiley-woman-talking-phone-medium-shot.jpg" class="d-block w-100" alt="..."style="  background-size: contain; border-radius: 5px;">
             <div class="carousel-caption d-none d-md-block">
               <h5>Top Trending influencer</h5>
             </div>
@@ -256,41 +290,90 @@
        <div class="service"   id = "service" style="background-color: rgb(184, 0, 184);display: flex; align-items: center; justify-content: center; height: 40px;"> <strong style="font-size: 20px;">Our services</strong></div>      
        <br>
        <br><br>
-       <div class="container" style="height: 250px; width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center; justify-content: space-between;" > 
-        <div class="card" style="width: 15rem; border: 1px solid black; " >
-          <div class="collab" style=" background-image: url(pic/collaboration.jpg); height: 280px; width: 15rem; background-size: cover; opacity: 0.7; display: flex; flex-direction: column; justify-content: center; align-items: center; ">
-              <strong><h4 style="color: rgb(255, 0, 255); ">collaboration</h4></strong>
-              <p style="text-align: center; margin-top: 20px;">Lorem ipsum, dolor sit amet consectetil quia dolor. Nesciunt optio quam qui ratione eius.</p>
+       <div class="container text-center">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card" style=" border: 1px solid black; " >
+              <div class="collab" style=" background-image: url(pic/collaboration.jpg);  background-size: cover; opacity: 0.7;  ">
+                  <strong><h4 style="color: rgb(255, 0, 255); ">collaboration</h4></strong><br><br>
+                  <p style="text-align: center; margin-top: 20px;">We believe in fostering successful collaborations between clients and influencers. Our support team can provide advice on best practices for collaboration</div>
+            </div>
+          </div>
+          <br>
+          <div class="col-md-3">
+            <div class="card" style=" border: 1px solid black;" >
+              <div class="collab" style=" background-image: url(pic/computer-security-with-login-password-padlock.jpg);  background-size: cover; opacity: 0.7;  ">
+                  <strong><h4 style="color: rgb(255, 0, 255);">Privacy and Security</h4></strong> <br><br>
+                  <p style="text-align: center; margin-top: 20px;">We prioritize the privacy and security of our users. Our support team can provide guidance on best practices for protecting you and ensuring secure interactions on the platform.</div>
+            </div>
+          </div>
+          <br>
+          <div class="col-md-3">
+            <div class="card" style=" border: 1px solid black;" >
+              <div class="collab" style=" background-image: url(pic/24by7.jpg);  background-size: contain; opacity: 0.7;  ">
+                  <strong><h4 style="color: rgb(255, 0, 255);">24/7</h4></strong> <br><br>
+                  <p style="text-align: center; margin-top: 20px;">Our dedicated customer support team is available around the clock to assist with any queries or issues you may encounter. Whether you need help with your account</div>
+            </div>
+          </div>
+          <br>
+          <div class="col-md-3">
+            <div class="card" style=" border: 1px solid black;" >
+              <div class="collab" style=" background-image: url(pic/technical.jpg);  background-size: cover; opacity: 0.7; ">
+                  <strong><h4 style="color: rgb(255, 0, 255);">Technical support</h4></strong><br><br>
+                  <p style="text-align: center; margin-top: 20px;">For any technical issues or bugs encountered on the website, our technical support team is on standby to provide prompt assistance and to ensure the platform runs smoothly.</p>                  </div>
+            </div>
           </div>
         </div>
-        <div class="card" style="width: 15rem; border: 1px solid black;" >
-          <div class="collab" style=" background-image: url(pic/computer-security-with-login-password-padlock.jpg); height: 280px; width: 15rem; background-size: cover; opacity: 0.7; display: flex; flex-direction: column; justify-content: center; align-items: center; ">
-              <strong><h4 style="color: rgb(255, 0, 255);">Privacy and Security</h4></strong>
-              <p style="text-align: center; margin-top: 20px;">We prioritize the privacy and security of our users. Our support team can provide guidance on best practices for protecting your personal information and ensuring secure interactions on the platform.</p>
-              </div>
         </div>
-        <div class="card" style="width: 15rem; border: 1px solid black;" >
-          <div class="collab" style=" background-image: url(pic/24by7.jpg); height: 280px; width: 15rem; background-size: contain; opacity: 0.7; display: flex; flex-direction: column; justify-content: center; align-items: center; ">
-              <strong><h4 style="color: rgb(255, 0, 255);">24/7</h4></strong>
-              <p style="text-align: center; margin-top: 20px;">Our dedicated customer support team is available around the clock to assist with any queries or issues you may encounter</p>
-          </div>
-        </div>
+        
          
-        <div class="card" style="width: 15rem; border: 1px solid black;" >
-          <div class="collab" style=" background-image: url(pic/technical.jpg); height: 280px; width: 15rem; background-size: cover; opacity: 0.7; display: flex; flex-direction: column; justify-content: center; align-items: center; ">
-              <strong><h4 style="color: rgb(255, 0, 255);">Technical support</h4></strong>
-              <p style="text-align: center; margin-top: 20px;">For any technical issues or bugs encountered on the website, our technical support team is on standby to provide prompt assistance
-              </p>
-              </div>
-        </div> 
-        </div>
+        
         <br>
         <br>
         <!-- Team -->
         <div class="team"  id = "team" style="background-color: rgb(184, 0, 184);display: flex; align-items: center; justify-content: center; height: 40px;"> <strong style="font-size: 20px;">Our Team</strong></div>      
         <br><br>
 
-        <div class="container" style="height: 250px;  width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center; justify-content: space-between;" > 
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card" >
+                <i class="fa-solid fa-handshake-angle"></i>
+                <div class="card-body">
+                  <h5 class="card-title">Under the Guidence of</h5>
+                  <div class="c" style="display: flex; flex-direction: row; align-items: center;">
+                    <img src="pic/WhatsApp Image 2024-07-18 at 12.21.48 PM.jpeg" alt="" height="100px" width="100px" style="border-radius: 50%;">
+                    <h3 style="margin-left: 50px;">Rajesh Bansal</h3>
+                  </div>
+                  <br>
+                  <p class="card-text">Author of Real Java Lorem. Founder of Banglore Computer classes.Experience of more than 15 years</p>
+                 </div>
+              </div>
+            </div>
+            <br>
+            <div class="col-md-6">
+              <div class="card" >
+                <i class="fa-solid fa-handshake-angle"></i>
+                <div class="card-body">
+                  <h5 class="card-title">Developer</h5>
+                  <div class="c" style="display: flex; flex-direction: row; align-items: center;">
+                    <img src="pic/map.jpeg" alt="" height="100px" width="100px" style="border-radius: 50%;">
+                    <h3 style="margin-left: 50px;">Arun grover</h3>
+                  </div>
+                  <br>
+                  <p class="card-text">Student of Baba Farid college of engineering and technology. pursuing computer science and currently in 3rd year</p>
+                 </div>
+              </div>
+            </div>
+            <br>
+           
+          </div>
+          </div>
+
+
+
+
+        <!-- <div class="container" style="height: 250px;  width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center; justify-content: space-between;" > 
             <div class="card" style="width: 47%; height: 230px;">
                 <i class="fa-solid fa-handshake-angle"></i>
                 <div class="card-body">
@@ -317,14 +400,48 @@
               </div>
              
              
-            </div>
+            </div> -->
     <br>
     <br>
      <!-- Reach us -->
-     <div class="reach" id = "reach" style="background-color: rgb(184, 0, 184);display: flex; align-items: center; justify-content: center; height: 40px;"> <strong style="font-size: 20px;">Reach us</strong></div>      
-      <div class="container" style="height: 500px; ">
-        <img src="pic/ne.jpeg" alt="" style="background-size: cover;" >
-      </div>      
+     <div class="reach" id = "reach" style="background-color: rgb(184, 0, 184);display: flex; align-items: center; justify-content: center;height: 40px;"> <strong style="font-size: 20px;">Reach us</strong></div>      
+     
+     <!-- <div class="row">
+      <div class="col-md-12">
+        <div class="container" >
+          <img src="pic/ne.jpeg" alt=""  >
+        </div> 
+      </div>
+     </div>  -->
+     <div id="reach" style="margin-top: 60px; margin-bottom: 60px;">
+      <div class="card">
+        
+        <div class="card-body" style="background-image: url('pic/ne.jpeg'); background-size: cover;">
+          <div class="row" >
+            <div class="col-md-6">
+              <div class="card" style="background-color: rgb(247, 246, 247); ">
+                
+                <div class="card-body">
+                  
+                  <h5 class="card-title">+91 628360-1121</h5>
+                  <p class="card-text">arungrover488@gmail.com</p>
+                </div>
+              </div>
+            </div>
+             <div class="col-md-6">
+              <div class="card" style="background-color: rgb(247, 246, 247);">
+                <div class="card-body">
+                  
+                  <h5 class="card-title">Baba farid college of engineering and technology</h5>
+                  <p class="card-text">Deon,Bathinda</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+          
       <br>
     <div class="reach" style="background-color: white;display: flex; align-items: center; justify-content: center; height: 40px;">
         <div class="left">copyright@bce</div>
