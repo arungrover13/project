@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script>
         $(document).ready(function(){
             let active = localStorage.getItem("activeuser");
@@ -72,7 +73,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg fixed-top" style="height: 55px; background-color: rgb(184, 0, 184); box-shadow: 1px 1px 15px black;">
+  <!-- <nav class="navbar navbar-expand-lg fixed-top" style="height: 55px; background-color: rgb(184, 0, 184); box-shadow: 1px 1px 15px black;">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="pic/cute-star-dry-clay-yellow-graphic-kids.jpg" alt="Bootstrap" width="50" height="50" style="border-radius: 50%;">
@@ -98,6 +99,37 @@
             <button type="button" class="btn btn-dark" id="logout" style="margin-left: 10px; font-size: 15px;">Logout</button>
         </div>
     </div>
+  </nav> -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" style="background-color: rgb(184, 0, 184); box-shadow: 1px 1px 15px black;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="pic/cute-star-dry-clay-yellow-graphic-kids.jpg" alt="Bootstrap" width="50" height="50" style="border-radius: 50%;">
+      </a>
+      <a class="navbar-brand" href="index.html" style="color: white;">localstar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color: white;">
+        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         
+          <li class="nav-item" style="font-size: 15px; margin-left: 10px;">
+            <a class="nav-link active" href="#service" style="color: white;">Our Services</a>
+          </li>
+          <li class="nav-item" style="font-size: 15px; margin-left: 10px;">
+            <a class="nav-link active" href="#team" style="color: white;">Our Team</a>
+          </li>
+          <li class="nav-item" style="font-size: 15px; margin-left: 10px;">
+            <a class="nav-link active" href="#reach" style="color: white;">Reach us</a>
+          </li>
+          <li>
+            <h3 style="color: white;">Influencer Page</h3>
+        </li>
+        </ul>
+        <form class="d-flex" role="search">
+            <button type="button" class="btn btn-dark" id="logout" style="margin-left: 10px; font-size: 15px;">Logout</button>
+        </form>
+      </div>
+    </div>
   </nav>
 
   <div class="h" style="display: flex; flex-direction: row; align-items: center; justify-content: center; justify-content: space-between; margin-top: 90px;">
@@ -106,7 +138,7 @@
       </center>
   </div>
 
-  <div class="contain" style="height: 400px; width: 1600px; display: flex; flex-direction: row; justify-content:center; align-items: center;">
+  <!-- <div class="contain" style="height: 400px; width: 1600px; display: flex; flex-direction: row; justify-content:center; align-items: center;">
       <div class="card" style="width: 25rem; height: 400px; margin-left: 100px; display: flex; flex-direction: column; justify-content:center; align-items: center;">
           <i class="fa-solid fa-user" id="us"></i>
           <div class="card-body">
@@ -141,7 +173,63 @@
               </p>
           </div>
       </div>
-  </div>
+  </div> -->
+  <br><br><br>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card" style=" display: flex; flex-direction: column; justify-content:center; align-items: center;">
+            <br><i class="fa-solid fa-user" id="us"></i>
+            <div class="card-body"><br>
+                <p class="card-text" >
+                    <form action="/jj" method="post">
+                        <button type="submit" class="btn btn-success">Influencer Profile</button>
+                    </form>
+                </p>
+            </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-3">
+        <div class="card" style="  display: flex; flex-direction: column; justify-content:center; align-items: center;">
+            <br><i class="fa-solid fa-business-time" id="us"></i>
+            <div class="card-body"><br><br>
+                <p class="card-text" >
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Bookings</button>
+                </p>
+            </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-3">
+        <div class="card" style="  display: flex; flex-direction: column; justify-content:center; align-items: center;">
+            <br><i class="fa-solid fa-gear" id="us"></i>
+            <div class="card-body"><br><br>
+                <p class="card-text" >
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal3">Setting</button>
+                </p>
+            </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-3">
+        <div class="card" style="  display: flex; flex-direction: column; justify-content:center; align-items: center;">
+            <br><i class="fa-solid fa-calendar-days" id="us"></i>
+            <div class="card-body"><br><br>
+                <p class="card-text" >
+                    <a href="/event-man"><button type="button" class="btn btn-primary">Event Manager</button></a>
+                </p>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  
+
+
+
+<!-- modals -->
 
   <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">

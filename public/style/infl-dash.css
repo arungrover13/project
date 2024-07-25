@@ -1,14 +1,9 @@
-.card{
-    width: 200px;
-    height: 250px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
+
 .card:hover{
     background-color: rgb(223, 223, 223);
 }
 #us{
-    margin-top: 50px;
+   
     font-size: 150px;
 
 }
